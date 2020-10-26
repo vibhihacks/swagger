@@ -1,0 +1,45 @@
+{
+  "id": "5d088127-da7b-437f-8fa5-1bbd663d0ade",
+  "name": "MAIS Subscriptions API",
+  "description": "MAIS Subscriptions API",
+  "order": [],
+  "folders": [
+    {
+      "id": "e0777b49-c150-4e39-a749-894ef62edd39",
+      "name": "v1",
+      "description": "Folder for v1",
+      "order": [
+        "03c9c8ef-7b51-4957-af2b-30d172d58253"
+      ],
+      "collection_name": "MAIS Subscriptions API",
+      "collection_id": "5d088127-da7b-437f-8fa5-1bbd663d0ade",
+      "collection": "5d088127-da7b-437f-8fa5-1bbd663d0ade"
+    }
+  ],
+  "timestamp": 1413302258635,
+  "synced": false,
+  "requests": [
+    {
+      "id": "03c9c8ef-7b51-4957-af2b-30d172d58253",
+      "headers": "Accept: application/xml\nContent-Type: application/xml\ndi_tid: {{di_tid}}\nuser-agent: {{user-agent}}\noriginating_ip: {{originating_ip}}\nAuthorization: {{Authorization}}\nAuthorization: Bearer {{auth_token}}",
+      "url": "https://{{base-url}}/messagingservices/v1/fis/:di_fiid/fiCustomers/:di_ficustomer/events",
+      "pathVariables": {
+        "di_fiid": "{{di_fiid}}",
+        "di_ficustomer": "{{di_ficustomer}}"
+      },
+      "preRequestScript": "",
+      "method": "POST",
+      "data": "{\"Events\":{\"description\":\"\",\"type\":\"object\",\"title\":\"Events\",\"properties\":{\"Event\":{\"properties\":{\"fiCustomerId\":{\"type\":\"string\",\"description\":\"FI Customer Id\",\"example\":\"String\"},\"fiId\":{\"type\":\"string\",\"description\":\"FI Id\",\"example\":\"String\"},\"eventType\":{\"type\":\"string\",\"description\":\"Event Type\",\"example\":\"String\"},\"dataMap\":{\"properties\":{\"map\":{\"type\":\"array\",\"description\":\"Action Attribute Key Value pairs for this action of the subscription\",\"items\":{\"properties\":{\"key\":{\"type\":\"string\",\"description\":\"condition key\",\"example\":\"String\"},\"value\":{\"type\":\"string\",\"description\":\"condition value\",\"example\":\"String\"}},\"_model\":\"entry\"},\"example\":null}},\"_model\":\"dataMap\"}},\"_model\":\"Event\"}},\"example\":{}}}",
+      "dataMode": "raw",
+      "description": "Sends the necessary event to the message service.\n",
+      "descriptionFormat": "html",
+      "time": 1603470417931,
+      "version": 2,
+      "responses": [],
+      "tests": "",
+      "collectionId": "5d088127-da7b-437f-8fa5-1bbd663d0ade",
+      "synced": false,
+      "name": "Send Event"
+    }
+  ]
+}
